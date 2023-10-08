@@ -1,0 +1,7 @@
+C:\Users\RSChao\source\repos\FileNameRandomiser\FileNameRandomiser\bin\Release\FileNameRandomiser.exe.config
+C:\Users\RSChao\source\repos\FileNameRandomiser\FileNameRandomiser\bin\Release\FileNameRandomiser.exe
+C:\Users\RSChao\source\repos\FileNameRandomiser\FileNameRandomiser\bin\Release\FileNameRandomiser.pdb
+C:\Users\RSChao\source\repos\FileNameRandomiser\FileNameRandomiser\obj\Release\FileNameRandomiser.csproj.AssemblyReference.cache
+C:\Users\RSChao\source\repos\FileNameRandomiser\FileNameRandomiser\obj\Release\FileNameRandomiser.csproj.CoreCompileInputs.cache
+C:\Users\RSChao\source\repos\FileNameRandomiser\FileNameRandomiser\obj\Release\FileNameRandomiser.exe
+C:\Users\RSChao\source\repos\FileNameRandomiser\FileNameRandomiser\obj\Release\FileNameRandomiser.pdb
