@@ -9,4 +9,4 @@ Los nombres aleatorios se pueden editar en nameList.dat, cumpliendo estas condic
 
 Si hay un error aparecerá en error.log (autogenerado) y en consola. Reportar a discord: rschao_alt
 
-Los archivos incluídos enel setup deberán ser colocados en la carpeta del binaario .exe
+Los archivos incluídos en el setup deberán ser colocados en la carpeta del binaario .exe
