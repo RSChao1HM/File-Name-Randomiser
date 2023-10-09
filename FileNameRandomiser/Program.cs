@@ -20,33 +20,24 @@ namespace FileNameRandomiser
         public static FileStream[] files;
         static int repeatings;
         static string[] texts = new string[repeatings + 1];
-        //TODO: Save each file in a files memory space
-        //Read settings from .txt file *Donenzo*
         static void Main(string[] args)
         {
-            FileStream settings = File.Open(path + "\\config.txt", FileMode.OpenOrCreate);
-            settings.Close();
-
+            var startTimeSpan = TimeSpan.Zero;
+            var periodTimeSpan = TimeSpan.FromMinutes(10);
 
             try
             {
-
-                string[] configs = File.ReadAllLines(path + "/config.txt");
-                repeatings = int.Parse(configs[0]);
-                texts = new string[repeatings + 1];
-                Random random = new Random();
-                
-                RandomStrings randomStrings = new RandomStrings();
-                texts = randomStrings.GetRandomStrings(repeatings);
-                string LPath = configs[1];
-
-
-                RenameFilesFr(LPath);
-
+                var timer = new Timer((e) =>
+                {
+                    MainCode();
+                }, null, startTimeSpan, periodTimeSpan);
             }
-            catch(Exception ex) {
+            catch(Exception ex)
+            {
                 Debug.Log(ex);
             }
+            Console.WriteLine("Please do not close this process as doing so will stop the program");
+            Console.ReadLine();
         }
         ///<Summary>
         ///rename this bitch
@@ -80,7 +71,39 @@ namespace FileNameRandomiser
             //Console.ReadLine();
 
         }
+        ///<summary>
+        ///The main method
+        ///</summary>
+        public static void MainCode()
+        {
+            FileStream settings = File.Open(path + "\\config.txt", FileMode.OpenOrCreate);
+            settings.Close();
+
+
+            try
+            {
+
+                string[] configs = File.ReadAllLines(path + "/config.txt");
+                repeatings = int.Parse(configs[0]);
+                texts = new string[repeatings + 1];
+                Random random = new Random();
+
+                RandomStrings randomStrings = new RandomStrings();
+                texts = randomStrings.GetRandomStrings(repeatings);
+                string LPath = configs[1];
+
+
+                RenameFilesFr(LPath);
+
+            }
+            catch (Exception ex)
+            {
+                Debug.Log(ex);
+            }
+        }
     }
+
+
     ///<Summary>
     ///log shit into files cuz why not lol
     ///</Summary>
